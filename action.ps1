@@ -30,13 +30,9 @@ Push-Location $ncPowershell | Out-Null
 . ./includes.ps1
 Pop-Location | Out-Null
 
-# Fetch the inputs
-
-$server = Get-ActionInput "server" $true
-
 try
 {
-    Logout-Docker $server
+    Logout-Docker
 }
 catch
 {
